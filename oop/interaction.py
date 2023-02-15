@@ -16,7 +16,7 @@ class Student(Human):
     #  имя объекта и текст вопроса задаются при вызове метода ask_question
     def ask_question(self, someone, question):
         # напечатайте на экран вопрос в нужном формате
-        print(f'{someone.name}, {question}.')
+        print(f'{someone.name}, {question}')
         # запросите ответ на вопрос у someone
         someone.answer_question(question)
         print('')  # этот print выводит разделительную пустую строку
@@ -35,12 +35,9 @@ class Mentor(Human):
 class CodeReviewer(Human):
     def answer_question(self, question):
         if question == 'что не так с моим проектом?':
-            # print('О, вопрос про проект, это я люблю.')
-            result =  'О, вопрос про проект, это я люблю.'
+            print('О, вопрос про проект, это я люблю.')
         else:
-            result = (f'{super().answer_question(question)}')
-        return
-    print(answer_question(self, question))
+            super().answer_question(question)
 
 
 class Curator(Human):
@@ -56,7 +53,7 @@ class Curator(Human):
 # объявите и реализуйте классы CodeReviewer и Mentor
 
 
-# следующий код менять не нужно, он работает, мы проверяли
+#Следующий код менять не нужно, он работает, мы проверяли
 student1 = Student('Тимофей')
 curator = Curator('Марина')
 mentor = Mentor('Ира')
